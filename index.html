@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naga Raju & Sudha Ramu Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;600&family=Noto+Serif+Telugu:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px 20px;
+    color:#f8f4f1;
+
+    background:
+        linear-gradient(rgba(10,20,30,0.35), rgba(10,20,30,0.55)),
+        url("couple.jpeg") center/cover no-repeat;
+}
+
+/* Main Container */
+.container{
+    max-width:520px;
+    width:100%;
+    animation:fadeIn 1.5s ease forwards;
+}
+
+/* Heading */
+h1{
+    font-family:'Playfair Display', serif;
+    font-size:34px;
+    font-weight:600;
+    margin-bottom:25px;
+    letter-spacing:1px;
+    color:#fff8f6;
+    text-shadow:0 6px 20px rgba(0,0,0,0.55);
+}
+
+/* Toggle */
+.toggle{
+    margin-bottom:30px;
+}
+
+.toggle button{
+    border:none;
+    padding:8px 20px;
+    margin:0 6px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.18);
+    color:#fff8f6;
+    font-size:14px;
+    cursor:pointer;
+    transition:0.3s ease;
+    backdrop-filter:blur(4px);
+}
+
+.toggle button.active{
+    background:#f4b6c2;
+    color:#3a2e2a;
+}
+
+/* Content */
+.content{
+    display:none;
+    animation:fadeUp 1s ease forwards;
+}
+.content.active{
+    display:block;
+}
+
+/* Names */
+.names{
+    font-family:'Playfair Display', serif;
+    font-size:42px;
+    font-weight:600;
+    margin:35px 0;
+    color:#f4b6c2;
+    line-height:1.3;
+    text-shadow:
+        0 8px 30px rgba(0,0,0,0.55),
+        0 4px 15px rgba(244,182,194,0.35);
+}
+
+/* Sections */
+.section{
+    margin-top:18px;
+    font-size:18px;
+    line-height:1.9;
+    color:#f2ece9;
+    text-shadow:0 3px 10px rgba(0,0,0,0.5);
+}
+
+/* Google Maps Button */
+a{
+    display:inline-block;
+    margin-top:14px;
+    padding:12px 28px;
+    background:linear-gradient(135deg,#f4b6c2,#f8d4dc);
+    border-radius:40px;
+    color:#3a2e2a;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:0.5px;
+    font-size:15px;
+    transition:all 0.3s ease;
+    box-shadow:0 10px 25px rgba(244,182,194,0.4);
+    animation:pulseGlow 2.5s infinite;
+}
+
+a:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 15px 35px rgba(244,182,194,0.6);
+}
+
+/* Telugu */
+.telugu{
+    font-family:'Noto Serif Telugu', serif;
+    font-size:20px;
+    line-height:2;
+    color:#f2ece9;
+}
+
+/* Quote */
+.quote{
+    margin-top:35px;
+    font-style:italic;
+    font-size:15px;
+    opacity:0.95;
+    color:#ffe5ea;
+    text-shadow:0 3px 10px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+.footer{
+    margin-top:40px;
+    font-size:13px;
+    opacity:0.9;
+    color:#f2ece9;
+}
+/* Map Icon Alignment */
+.map-icon{
+    display:inline-flex;
+    align-items:center;
+    margin-right:8px;
+}
+
+/* Align icon + text */
+a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes pulseGlow{
+    0%{ box-shadow:0 0 0 0 rgba(244,182,194,0.6);}
+    50%{ box-shadow:0 0 25px 10px rgba(244,182,194,0.3);}
+    100%{ box-shadow:0 0 0 0 rgba(244,182,194,0);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Wedding Invitation</h1>
+
+    <div class="toggle">
+        <button id="btnEnglish" class="active" onclick="showEnglish()">English</button>
+        <button id="btnTelugu" onclick="showTelugu()">తెలుగు</button>
+    </div>
+
+    <!-- English -->
+    <div id="englishContent" class="content active">
+
+        <div class="section">
+            With the blessings of our beloved parents
+        </div>
+
+        <div class="names">
+            NAGA RAJU <br> & <br> SUDHA RAMU
+        </div>
+
+        <div class="section">
+            request the honor of your presence at their wedding ceremony.
+        </div>
+
+        <div class="section">
+            📅 <strong>March 5, 2025</strong><br>
+            ⏰ <strong>10:30 AM (Muhurtham)</strong>
+        </div>
+
+        <div class="section">
+            📍 Sontyam, Vizag, Andhra Pradesh <br>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=17.8668611,83.2882222" target="_blank">
+    <span class="map-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#3a2e2a">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 
+            9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5 
+            14.5 7.6 14.5 9 13.4 11.5 12 11.5z"/>
+        </svg>
+    </span>
+    View Location on Maps
+</a>
+
+        </div>
+
+        <div class="quote">
+            "Two hearts, one promise, a lifetime together."
+        </div>
+
+    </div>
+
+    <!-- Telugu -->
+    <div id="teluguContent" class="content telugu">
+
+        <div class="section">
+            మా తల్లిదండ్రుల ఆశీస్సులతో
+        </div>
+
+        <div class="names">
+            నాగ రాజు <br> & <br> సుధా రాము
+        </div>
+
+        <div class="section">
+            వారి వివాహ మహోత్సవానికి మీ రాకను మనస్ఫూర్తిగా కోరుకుంటున్నారు.
+        </div>
+
+        <div class="section">
+            📅 <strong>5 మార్చి 2025</strong><br>
+            ⏰ <strong>ఉదయం 10:30 (ముహూర్తం)</strong>
+        </div>
+
+        <div class="section">
+            📍శొంఠ్యం, విశాఖపట్నం, ఆంధ్రప్రదేశ్ <br>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=17.8668611,83.2882222" target="_blank">
+    <span class="map-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#3a2e2a">
+            <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 
+            9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5 
+            14.5 7.6 14.5 9 13.4 11.5 12 11.5z"/>
+        </svg>
+    </span>
+    మ్యాప్స్ లో మార్గదర్శనం
+</a>
+        </div>
+
+        <div class="quote">
+            "రెండు హృదయాలు ఒకటై జీవితాంతం కలిసి ప్రయాణం."
+        </div>
+
+    </div>
+
+    <div class="footer">
+        We look forward to celebrating with you ❤️
+    </div>
+
+</div>
+
+<script>
+function showEnglish(){
+    document.getElementById("englishContent").classList.add("active");
+    document.getElementById("teluguContent").classList.remove("active");
+    document.getElementById("btnEnglish").classList.add("active");
+    document.getElementById("btnTelugu").classList.remove("active");
+}
+
+function showTelugu(){
+    document.getElementById("teluguContent").classList.add("active");
+    document.getElementById("englishContent").classList.remove("active");
+    document.getElementById("btnTelugu").classList.add("active");
+    document.getElementById("btnEnglish").classList.remove("active");
+}
+</script>
+
+</body>
+</html>
