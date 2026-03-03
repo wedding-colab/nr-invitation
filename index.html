@@ -195,6 +195,26 @@ a{
     50%{ box-shadow:0 0 25px 10px rgba(244,182,194,0.3);}
     100%{ box-shadow:0 0 0 0 rgba(244,182,194,0);}
 }
+    /* Unmute Button */
+.unmute-btn{
+    position:absolute;
+    bottom:12px;
+    right:12px;
+    background:rgba(244,182,194,0.9);
+    border:none;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    color:#3a2e2a;
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(0,0,0,0.3);
+    transition:all 0.3s ease;
+}
+
+.unmute-btn:hover{
+    transform:scale(1.05);
+}
 
 </style>
 
@@ -298,13 +318,19 @@ a{
 <div>
     <h1>Save the Date</h1>
 
-    <div class="video-wrapper">
+    <div class="video-wrapper" style="position:relative;">
         <video 
+            id="weddingVideo"
             src="gnr.mp4"
             autoplay
+            muted
             loop
             playsinline
         ></video>
+
+        <button class="unmute-btn" onclick="toggleMute()">
+            🔇 Tap to Unmute
+        </button>
     </div>
 </div>
 
@@ -325,9 +351,24 @@ function showTelugu(){
     document.getElementById("btnEnglish").classList.remove("active");
 }
 </script>
+    <script>
+function toggleMute(){
+    const video = document.getElementById("weddingVideo");
+    const btn = document.querySelector(".unmute-btn");
+
+    if(video.muted){
+        video.muted = false;
+        btn.innerHTML = "🔊 Sound On";
+    }else{
+        video.muted = true;
+        btn.innerHTML = "🔇 Tap to Unmute";
+    }
+}
+</script>
 
 </body>
 </html>
+
 
 
 
