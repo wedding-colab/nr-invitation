@@ -215,6 +215,69 @@ a{
 .unmute-btn:hover{
     transform:scale(1.05);
 }
+    /* Save the Date Highlight */
+.save-date{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-top:45px;
+    margin-bottom:18px;
+}
+
+.save-date h2{
+    font-family:'Playfair Display', serif;
+    font-size:30px;
+    font-weight:600;
+    color:#f8d4dc;
+    letter-spacing:2px;
+    position:relative;
+    text-shadow:0 6px 20px rgba(244,182,194,0.5);
+}
+
+/* glowing underline */
+.save-date h2::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:-8px;
+    width:70%;
+    height:2px;
+    background:linear-gradient(90deg,transparent,#f4b6c2,transparent);
+    transform:translateX(-50%);
+}
+
+/* subtle ring animation */
+.save-date .ring{
+    font-size:18px;
+    animation:softPulse 2.5s infinite;
+}
+
+/* minimal glow around video */
+.video-wrapper{
+    position:relative;
+}
+
+.video-wrapper::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    pointer-events:none;
+    box-shadow:0 0 35px rgba(244,182,194,0.25);
+    animation:videoGlow 3s ease-in-out infinite;
+}
+
+/* animations */
+@keyframes softPulse{
+    0%,100%{opacity:0.5; transform:scale(1);}
+    50%{opacity:1; transform:scale(1.15);}
+}
+
+@keyframes videoGlow{
+    0%,100%{box-shadow:0 0 25px rgba(244,182,194,0.2);}
+    50%{box-shadow:0 0 45px rgba(244,182,194,0.45);}
+}
 
 </style>
 
@@ -316,9 +379,13 @@ a{
         We look forward to celebrating with you ❤️
     </div>
 <div>
-    <h1>Save the Date</h1>
+    <div class="save-date">
+        <span class="ring">💍</span>
+        <h2>Save the Date</h2>
+        <span class="ring">💍</span>
+    </div>
 
-    <div class="video-wrapper" style="position:relative;">
+    <div class="video-wrapper">
         <video 
             id="weddingVideo"
             src="gnr.mp4"
@@ -368,6 +435,7 @@ function toggleMute(){
 
 </body>
 </html>
+
 
 
 
