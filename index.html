@@ -163,6 +163,21 @@ a{
     justify-content:center;
 }
 
+/* Save the Date Video */
+.video-wrapper{
+    margin-top:30px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.45);
+}
+
+.video-wrapper video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
 
 /* Animations */
 @keyframes fadeIn{
@@ -280,10 +295,19 @@ a{
     <div class="footer">
         We look forward to celebrating with you ❤️
     </div>
-    <div>
-        <h1>Save the Date</h1>
-        <video src=""></video>
+<div>
+    <h1>Save the Date</h1>
+
+    <div class="video-wrapper">
+        <video 
+            src="gnr.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+        ></video>
     </div>
+</div>
 
 </div>
 
@@ -305,6 +329,7 @@ function showTelugu(){
 
 </body>
 </html>
+
 
 
 
