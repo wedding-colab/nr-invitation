@@ -458,19 +458,26 @@ function toggleMute(){
     <script>
 function openFullscreen(){
     const video = document.getElementById("weddingVideo");
+    const unmuteBtn = document.querySelector(".unmute-btn");
 
+    // Request fullscreen
     if(video.requestFullscreen){
         video.requestFullscreen();
-    }else if(video.webkitRequestFullscreen){ /* Safari */
+    }else if(video.webkitRequestFullscreen){ // Safari
         video.webkitRequestFullscreen();
-    }else if(video.msRequestFullscreen){ /* IE11 */
+    }else if(video.msRequestFullscreen){ // IE11
         video.msRequestFullscreen();
     }
+
+    // Auto-unmute when fullscreen opens
+    video.muted = false;
+    unmuteBtn.innerHTML = "🔊 Sound On";
 }
 </script>
 
 </body>
 </html>
+
 
 
 
